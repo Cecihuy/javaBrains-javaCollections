@@ -36,3 +36,8 @@ LinkedHashSet advantages
 * add - O(1)
 * contains - O(1)
 * next - O(1)
+
+TreeSet performance
+* add - O(log n)
+* contains = O(log n)
+* iteration - O(log n)
