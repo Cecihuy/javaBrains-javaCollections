@@ -21,3 +21,11 @@ ArrayList vs LinkedList
 * position based access - ArrayList
 * constant and random insertions and removals - LinkedList
 * iteration - either
+
+HashSet efficiency
+* add - O(1)
+* remove - O(1)
+* contains - O(1)
+* load factor 12/16 = 0.75
+* initial number of buckets is 16
+* number of elements to rehash 12
