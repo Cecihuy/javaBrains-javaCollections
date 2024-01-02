@@ -10,7 +10,7 @@ class Hello{
         students.add(student3);
         students.add(student1);
         students.add(student2);
-        students.sort(null);
+        students.sort(new StudentLastNameComparator());
 
         System.out.println(students);
     }    
