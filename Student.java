@@ -1,9 +1,14 @@
-public class Student {
+public class Student implements Comparable<Student>{
     private String firstName;
     private String lastName;
     private int id;
     private String department;
 
+    @Override
+    public String toString() {
+        return "Student [firstName=" + firstName + ", lastName=" + lastName + ", id=" + id + ", department="
+                + department + "]";
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -73,5 +78,9 @@ public class Student {
     }
     public void setDepartment(String department) {
         this.department = department;
+    }
+    @Override
+    public int compareTo(Student o) {
+        return this.id - o.getId();
     }   
 }
