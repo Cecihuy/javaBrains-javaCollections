@@ -8,3 +8,11 @@ ArrayList performance
     ? best case - O(1)
     ? worst case - O(n)
     ? most case - O(1)
+
+LinkedList performance
+* get - O(n)
+* set - O(n)
+* contains - O(n)
+* remove(index) - O(1)
+* add(index) - O(1)
+* add - O(1)
