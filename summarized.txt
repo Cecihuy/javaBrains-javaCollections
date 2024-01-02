@@ -47,3 +47,8 @@ HashSet vs TreeSet
 * sorting is'nt important - HashSet
 * good hashing strategy - HashSet
 * predictable load factor - HashSet
+
+HashMap performance
+* get - O(1)
+* containsKey - O(1)
+* put - O(1)
