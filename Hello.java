@@ -1,14 +1,15 @@
-import java.util.Date;
+import java.util.Arrays;
 
 class Hello{
     public static void main(String[] args) {
-        int[] numbers;
-        numbers = new int[20];
-        numbers[0] = 10;
-        System.out.println(numbers[0]);
-
-        Date[] dates = new Date[7];
-        dates[3] = new Date();
-        System.out.println(dates[3]);
+        String[] names;
+        names = new String[7];
+        Arrays.fill(names, "name : ");
+        
+        for(int i = 0; i < names.length; i++){
+            names[i] = names[i] + i;
+            System.out.println(names[i]);
+        }
+        System.out.println(Arrays.binarySearch(names, "name : 4"));
     }
 }
