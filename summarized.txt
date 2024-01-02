@@ -41,3 +41,9 @@ TreeSet performance
 * add - O(log n)
 * contains = O(log n)
 * iteration - O(log n)
+
+HashSet vs TreeSet
+* order isn't important - HashSet
+* sorting is'nt important - HashSet
+* good hashing strategy - HashSet
+* predictable load factor - HashSet
