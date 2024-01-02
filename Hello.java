@@ -1,24 +1,9 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-
 class Hello{
     public static void main(String[] args) {
-        ArrayList<String> names = new ArrayList<>();
-        for(int i = 0; i < 7; i++){
-            names.add("name : " + i);
-        }
-        Iterator<String> iterator = names.iterator();
-        String element = iterator.next();
-        System.out.println(element);
+        Student student1 = new Student("foo", "bar", 1, "science");
+        Student student2 = new Student("foo", "bar", 1, "science");
 
-        System.out.println("while loop");
-        while(iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
-
-        System.out.println("for-each loop");
-        for(String efl:names){
-            System.out.println(efl);
-        }
-    }
+        System.out.println(student1 == student2);
+        System.out.println(student1.equals(student2));
+    }    
 }
