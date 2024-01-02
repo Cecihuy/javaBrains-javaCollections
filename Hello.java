@@ -1,15 +1,14 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 class Hello{
     public static void main(String[] args) {
-        String[] names;
-        names = new String[7];
-        Arrays.fill(names, "name : ");
-        
-        for(int i = 0; i < names.length; i++){
-            names[i] = names[i] + i;
-            System.out.println(names[i]);
+        ArrayList<String> names = new ArrayList<>();
+        for(int i = 0; i < 7; i++){
+            names.add("name : " + i);
         }
-        System.out.println(Arrays.binarySearch(names, "name : 4"));
+        for(int i = 0; i < 7; i++){
+            System.out.println(names.get(i));
+        }
+        System.out.println(names.indexOf("name : 4"));
     }
 }
