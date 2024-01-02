@@ -1,0 +1,10 @@
+ArrayList performance
+* get - O(1)
+* set - O(1)
+* contains - O(n)
+* remove(index) - O(n)
+* add(index) - O(n)
+* add - ?
+    ? best case - O(1)
+    ? worst case - O(n)
+    ? most case - O(1)
