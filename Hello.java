@@ -15,5 +15,10 @@ class Hello{
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
+
+        System.out.println("for-each loop");
+        for(String efl:names){
+            System.out.println(efl);
+        }
     }
 }
