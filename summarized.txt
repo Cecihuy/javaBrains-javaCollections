@@ -16,3 +16,8 @@ LinkedList performance
 * remove(index) - O(1)
 * add(index) - O(1)
 * add - O(1)
+
+ArrayList vs LinkedList
+* position based access - ArrayList
+* constant and random insertions and removals - LinkedList
+* iteration - either
