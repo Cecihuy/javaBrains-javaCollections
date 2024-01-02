@@ -29,3 +29,10 @@ HashSet efficiency
 * load factor 12/16 = 0.75
 * initial number of buckets is 16
 * number of elements to rehash 12
+
+LinkedHashSet advantages
+* insertion order
+* ordered iteration O(1) time
+* add - O(1)
+* contains - O(1)
+* next - O(1)
