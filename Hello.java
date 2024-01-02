@@ -1,25 +1,48 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 class Hello{
     public static void main(String[] args) {
-        Set<String> names = new HashSet<>();
-        names.add("Name A");
-        names.add("Name B");
+        Map<Integer, Student> students = new HashMap<>();
+        Student student1 = new Student("foo", "bar", 2, "Science");
+        Student student2 = new Student("bar", "baz", 1, "commerce");
+        Student student3 = new Student("blah", "bar", 3, "arts");
 
-        /* print element. no order */
-        System.out.println(names);
+        students.put(student1.getId(), student1);
+        students.put(student2.getId(), student2);
+        students.put(student3.getId(), student3);
+        
+        /* print element */
+        System.out.println(students);
 
-        /* added element with duplicate value 
-        is not allowed(will be ignored) */
-        names.add("Name A");
-        System.out.println(names);
+        /* print element base on key */
+        System.out.println(students.get(1));
 
-        /* remove element base on value */
-        names.remove("Name A");
-        System.out.println(names);
+        /* iterating key */
+        for(Integer key: students.keySet()){
+            System.out.println(key);
+        }
 
-        /* check an element if already there */
-        System.out.println(names.contains("Name B"));       
-    }    
+        /* iterating values */
+        for(Student val: students.values()){
+            System.out.println(val);
+        }
+
+        /* print both key and values */
+        for(Map.Entry<Integer, Student> entry:students.entrySet()){
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+        
+        /* try get values by key, if no exist then create one */
+        System.out.println(students.getOrDefault(100, new Student("test", "test", 100, "test")));
+
+        /* try put values by key, if no exist then put one */
+        System.out.println(students.putIfAbsent(100, new Student("test", "test", 100, "test")));
+        
+        /* foreach */
+        students.forEach((key,value) -> System.out.println(value));
+
+        /* perform with lambda */
+        System.out.println(students.computeIfAbsent(100, key -> new Student("test", "test", key, "test")));
+    }
 }
