@@ -1,41 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 class Hello{
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
+        Set<String> names = new HashSet<>();
         names.add("Name A");
         names.add("Name B");
 
-        /* print element. it sorted base on insertion order */
+        /* print element. no order */
         System.out.println(names);
 
-        /* added one more element with duplicate value is allowed */
+        /* added element with duplicate value 
+        is not allowed(will be ignored) */
         names.add("Name A");
         System.out.println(names);
-       
-        /* to set value based on index. any data on that index will be replace */
-        names.set(2, "Name C");
-        System.out.println(names);
 
-        /* get element based on index in argument */
-        System.out.println(names.get(0));
-        
-        /* get with no element will throw exception */
-        //System.out.println(names.get(200));
-
-        /* insert value base on index, if any data on that index will be shifted to next index
-         * also array size will be increased
-        */
-        names.add(1,"Name D");
-        System.out.println(names);
-
-        /* remove element base on index. all data next to it will be shifted to the left */
-        names.remove(1);
-        System.out.println(names);
-        
         /* remove element base on value */
-        names.remove("Name C");
+        names.remove("Name A");
         System.out.println(names);
+
+        /* check an element if already there */
+        System.out.println(names.contains("Name B"));       
     }    
 }
